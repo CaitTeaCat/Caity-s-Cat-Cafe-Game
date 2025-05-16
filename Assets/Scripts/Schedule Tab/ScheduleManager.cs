@@ -41,7 +41,6 @@ public class ScheduleManager : MonoBehaviour
             txtName = Instantiate(txtName, txtHead) as Text;
             txtName.text = employee.getFirstName();
             Instantiate(employeeColumn, schedulePane, false);
-            Debug.Log(employee.getFirstName());
         }
     }
 

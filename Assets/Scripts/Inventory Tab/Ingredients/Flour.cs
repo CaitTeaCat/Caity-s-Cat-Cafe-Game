@@ -2,66 +2,75 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GamePlay.InventoryTab
 {
     public class Flour : Ingredient
     {
 
-        public string _supplyName;
-        public int _amount;
-        public int _price;
-        public double _durability;
+        private string _supplyName;
+        private int _price;
+        private int _amount;
+        private double _durability;
         private double _spoilRate;
+        private Image _itemImage;
 
         public Flour()
         {
             supplyName = "Flour";
-            amount = 0;
-            price = 0;
+            price = 3;
+            amount = 1;
             durability = 100;
-            spoilRate = 10;
-
-        }
-        public override void addAmount(int num)
-        {
-            amount += num;
-        }
-        public override void removeAmount(int num)
-        {
-            amount -= num;
+            spoilRate = 5;
+            itemImage = null;
         }
 
+        public Flour(int amount)
+        {
+            supplyName = "Flour";
+            price = 3;
+            this.amount = amount;
+            durability = 100;
+            spoilRate = 5;
+            itemImage = null;
+        }
 
         public override string supplyName
         {
 
-            get { return supplyName; }
+            get { return _supplyName; }
             set { _supplyName = value; }
-        }
-
-        public override int amount
-        {
-            get { return amount; }
-            set { amount = value; }
         }
 
         public override int price
         {
-            get { return price; }
-            set { price = value; }
+            get { return _price; }
+            set { _price = value; }
+        }
+
+        public override int amount
+        {
+            get { return _amount; }
+            set { _amount = value; }
         }
 
         public override double durability
         {
-            get { return durability; }
-            set { durability = value; }
+            get { return _durability; }
+            set { _durability = value; }
         }
 
         public override double spoilRate
         {
-            get { return spoilRate; }
-            set { spoilRate = value;}
+            get { return _spoilRate; }
+            set { _spoilRate = value; }
+        }
+
+        public override Image itemImage
+        {
+            get { return _itemImage; }
+            set { _itemImage = value; }
         }
 
     }

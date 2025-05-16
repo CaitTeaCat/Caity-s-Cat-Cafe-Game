@@ -7,5 +7,10 @@ namespace GamePlay.InventoryTab
     public abstract class Ingredient : Supply
     {
         public abstract double spoilRate { get; set; }
+
+        public void removeDurability()
+        {
+            durability -= spoilRate;
+        }
     }
 }

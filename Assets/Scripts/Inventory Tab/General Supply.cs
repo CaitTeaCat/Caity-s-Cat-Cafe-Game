@@ -6,6 +6,11 @@ namespace GamePlay.InventoryTab
 {
     public abstract class GeneralSupply : Supply
     {
-        public abstract double durabilityRate { get; set; }
+        public abstract double usageRate { get; set; }
+
+        public void removeDurability()
+        {
+            durability -= usageRate;
+        }
     }
 }

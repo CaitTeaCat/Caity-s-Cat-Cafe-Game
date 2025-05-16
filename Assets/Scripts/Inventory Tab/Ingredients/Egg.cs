@@ -1,21 +1,75 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GamePlay.InventoryTab
 {
-    public class Egg : MonoBehaviour
+    public class Egg : Ingredient
     {
-        // Start is called before the first frame update
-        void Start()
+
+        private string _supplyName;
+        private int _price;
+        private int _amount;
+        private double _durability;
+        private double _spoilRate;
+        private Image _itemImage;
+
+        public Egg()
         {
-        
+            supplyName = "Egg";
+            price = 3;
+            amount = 1;
+            durability = 100;
+            spoilRate = 13;
+            itemImage = null;
         }
 
-        // Update is called once per frame
-        void Update()
+        public Egg(int amount)
         {
-        
+            supplyName = "Egg";
+            price = 3;
+            this.amount = amount;
+            durability = 100;
+            spoilRate = 13;
+            itemImage = null;
+        }
+
+        public override string supplyName
+        {
+
+            get { return _supplyName; }
+            set { _supplyName = value; }
+        }
+
+        public override int price
+        {
+            get { return _price; }
+            set { _price = value; }
+        }
+
+        public override int amount
+        {
+            get { return _amount; }
+            set { _amount = value; }
+        }
+
+        public override double durability
+        {
+            get { return _durability; }
+            set { _durability = value; }
+        }
+
+        public override double spoilRate
+        {
+            get { return _spoilRate; }
+            set { _spoilRate = value; }
+        }
+
+        public override Image itemImage
+        {
+            get { return _itemImage; }
+            set { _itemImage = value; }
         }
     }
 }
