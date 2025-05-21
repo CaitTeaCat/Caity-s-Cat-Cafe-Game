@@ -1,9 +1,8 @@
 {
-    "name": "GamePlay.InventoryTab",
-    "rootNamespace": "GamePlay",
+    "name": "GamePlay",
+    "rootNamespace": "",
     "references": [
-        "GUID:6055be8ebefd69e48b49212b09b47b2f",
-        "GUID:815a3dd688647dd47ae90f0bc4a28edc"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
